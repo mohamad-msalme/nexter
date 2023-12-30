@@ -1,0 +1,8 @@
+@use "../abstract//mixins";
+@use "../abstract/functions";
+@use "../abstract/variables";
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+}

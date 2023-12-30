@@ -1,0 +1,25 @@
+@use "../abstract/mixins";
+@use "../abstract/functions";
+@use "../abstract/variables";
+
+html {
+  font-size: 62.52%; // 1rem = 10px 10px/16px = 62.52%
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+#root {
+  //
+}
+
+::selection {
+  //
+}
+
+*:focus {
+  //
+}

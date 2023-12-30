@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "moduleResolution": "Bundler",
+
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "strict": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "pages/*": ["src/pages/*"],
+      "hooks/*": ["src/hooks/*"],
+      "components/*": ["src/components/*"],
+      "assets/*": ["assets/*"]
+    }
+  },
+
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "./global.d.ts",
+  ],
+  "exclude": ["node_modules", "./dist", "./build"]
+}
