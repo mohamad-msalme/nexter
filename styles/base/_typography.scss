@@ -1,8 +1,49 @@
-@use "../abstract//mixins";
-@use "../abstract/functions";
-@use "../abstract/variables";
+@use '../abstract//mixins';
+@use '../abstract/functions';
+@use '../abstract/variables';
 
-body {
+%heading {
+  font-family: variables.$font-display;
   font-weight: 400;
-  line-height: 1.7;
+}
+.heading-1 {
+  //
+  @extend %heading;
+  font-size: 4.5rem;
+  color: variables.$color-grey-light-1;
+  line-height: 1;
+}
+.heading-2 {
+  //
+  @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+
+  &--light {
+    color: variables.$color-grey-light-1;
+  }
+
+  &--dark {
+    color: variables.$color-grey-dark-1;
+  }
+}
+.heading-3 {
+  //
+  @extend %heading;
+  font-size: 1.6rem;
+  color: variables.$color-primary;
+  text-transform: uppercase;
+  &--dark {
+    //
+  }
+}
+.heading-4 {
+  //
+  @extend %heading;
+  font-size: 1.9rem;
+
+  &--dark {
+    color: variables.$color-grey-dark-1;
+  }
 }

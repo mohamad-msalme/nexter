@@ -8,9 +8,11 @@
       type="image/png"
       href="assets/images/favicon.png"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="<%= htmlWebpackPlugin.options.fontUrl %>" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <!-- Dynamic insertion of meta tags -->
     <% htmlWebpackPlugin.options.meta.forEach((meta) => { %>
         <meta <%= Object.entries(meta).map(([key, value]) => `${key}="${value}"`).join(' ') %>>

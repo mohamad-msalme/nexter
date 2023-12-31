@@ -1,39 +1,31 @@
-@use "./variables.scss";
+@use './variables.scss';
 /**
-  breakpoints 
-  1- 0px => 600px Phone
-  2- 600px => 900px Tab-part
-  3- 900px => 1200px Tab-land
-  4- 1800px => ----- Big-screen
-
-  0 -> 400px xs (25em)
-  400 -> 600px sm (37.5em)
-  600 -> 800 md (50em)
-  800 -> 950 lg (62.5em)
-  950 -> 1200xl (75em)
-  1800 -> 2xl (112.5em)
+  0 -> 600 xs (37.5)
+  800 -> 600px sm (50em)
+  1000 md (62.5em)
+  1200 lg (62.5em)
 */
 
 @mixin respond($breakpoint) {
   @if $breakpoint == xs {
-    @media (max-width: 28.15em) {
-      @content;
-    }
-  }
-  @if $breakpoint == sm {
     @media (max-width: 37.5em) {
       @content;
     }
   }
-
-  @if $breakpoint == md {
+  @if $breakpoint == sm {
     @media (max-width: 50em) {
       @content;
     }
   }
 
+  @if $breakpoint == md {
+    @media (max-width: 62.5em) {
+      @content;
+    }
+  }
+
   @if $breakpoint == lg {
-    @media (max-width: 59.375em) {
+    @media (max-width: 75em) {
       @content;
     }
   }

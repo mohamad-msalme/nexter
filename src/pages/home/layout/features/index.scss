@@ -1,0 +1,32 @@
+.features {
+  background-color: variables.$white;
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 6rem;
+  align-items: start;
+  margin: 12rem auto;
+
+  @include mixins.respond(sm) {
+    margin: 6rem auto;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1.5rem 2.5rem;
+    &__text {
+      font-size: 1.7rem;
+      color: variables.$color-grey-dark-2;
+    }
+
+    &__icon {
+      width: 4.5rem;
+      height: 4.5rem;
+      color: variables.$color-primary;
+      grid-row: 1 / span 2;
+      transform: translateY(-1rem);
+    }
+  }
+}

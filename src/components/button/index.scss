@@ -1,0 +1,19 @@
+.btn {
+  background-color: variables.$color-primary;
+  color: variables.$white;
+  border: none;
+  border-radius: 0;
+  font-family: variables.$font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background-color: variables.$color-primary-dark;
+  }
+
+  &:active {
+    background-color: variables.$color-primary;
+  }
+}

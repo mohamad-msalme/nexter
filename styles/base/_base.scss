@@ -1,19 +1,49 @@
-@use "../abstract/mixins";
-@use "../abstract/functions";
-@use "../abstract/variables";
+@use '../abstract/mixins';
+@use '../abstract/functions';
+@use '../abstract/variables';
 
 html {
   font-size: 62.52%; // 1rem = 10px 10px/16px = 62.52%
-  font-family: "Lato", sans-serif;
+  font-family: variables.$font-primary;
   scroll-behavior: smooth;
+  color: variables.$color-grey-dark-2;
+  line-height: 1.6;
+
+  @include mixins.respond(lg) {
+    font-size: 50%;
+  }
 }
 
 body {
   box-sizing: border-box;
+  font-weight: 300;
 }
 
 #root {
-  //
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start]minmax(min-content, 14.2rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @include mixins.respond(md) {
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content 40vw repeat(
+        3,
+        min-content
+      );
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(
+        8,
+        [col-start]minmax(min-content, 14.2rem) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @include mixins.respond(sm) {
+    grid-template-rows: 6rem calc(100vh - 6rem) repeat(6, min-content);
+  }
 }
 
 ::selection {

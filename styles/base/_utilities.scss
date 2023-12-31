@@ -1,6 +1,6 @@
-@use "../abstract/mixins";
-@use "../abstract/variables";
-@use "../abstract/functions";
+@use '../abstract/mixins';
+@use '../abstract/variables';
+@use '../abstract/functions';
 
 .container {
   margin: 0 auto;
@@ -35,4 +35,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 8rem;
 }

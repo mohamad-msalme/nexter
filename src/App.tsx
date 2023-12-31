@@ -1,5 +1,6 @@
 import React from 'react'
+import { Home } from 'pages/home'
 
 export const App: React.FC = () => {
-  return <div>App</div>
+  return <Home />
 }
